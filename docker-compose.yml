@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  proxy-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: proxy-manager
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    tty: true
